@@ -1,0 +1,298 @@
+
+:root {
+    --bg-color: #3b3b3b;
+    --text-color: #f0f0f0;
+    --primary-color: #e72d0c;
+    --secondary-color: #000000;
+    --t-color:#271a26;
+    --r-color:#a528ec;
+    --c-color: #5a5a5a;
+    --i-color:#f11e1e;
+}
+
+
+body {
+    font-family: 'DM Serif Text', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+     text-align: center;
+}
+
+.headertext {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.header-text h1 {
+    font-family: Oswald;
+}
+
+.header-text h2{
+    font-family:'Copperplate', 'Copperplate Gothic Light', sans-serif ;
+    color: #f05800;
+}
+
+.header-text p {
+    font-family:'Copperplate', 'Copperplate Gothic Light', sans-serif ;
+}
+
+/* Header/Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 0.2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-weight: 400;
+    opacity: 0.8;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+    opacity: 0;    
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: hwb(19 5% 3%);
+    transform: translateY(-5px);
+}
+
+/* Sections */
+.section-title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif; 
+    font-size: 3.5em; 
+    font-weight: 700; 
+    margin-bottom: 1em;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+}
+.about, .skills {
+    padding: 0px 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    
+}
+.about p{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #d8c3fa;
+}
+
+.about-dis{
+    font-size: 30px;
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    color: #db2e0f;
+}
+.about {
+    padding: 50px 0;
+    border-bottom: 20px solid var(--secondary-color);
+    border-top: 20px solid var(--secondary-color);
+    background-color: #111111; 
+   border: solid  5px rgb(255, 102, 0) ; 
+   border-radius:20px ;
+   margin: 60px;
+   padding: 20px;
+}
+
+
+
+/* Skills Section */
+.skills {
+    padding: 70px 20px;
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border-top: 20px;
+    margin: 60px;
+   border: solid  5px rgb(255, 102, 0) ; 
+   border-radius:20px ;
+
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* mouse එක උඩට ගෙනාම card එක පොඩ්ඩක් උඩට එනවා */
+     box-shadow: 0 5px 15px rgba(255, 255, 255, 1.5);
+}
+
+.skill-card h3 {
+    color: var(--primary-color); 
+}
+
+.skill-card p {
+    color: var(--r-color); 
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--secondary-color);
+    border-top: 1px solid #000000;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Bar */
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 10;
+    border-bottom: 2px solid var(--text-color);
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px; 
+     box-sizing: border-box;
+}
+
+.main-nav .logo {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.main-nav .logo a {
+    color: var(--Text-color); 
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+     letter-spacing: 2px;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+
+.photo{
+     flex-direction: row-reverse;
+         display: flex;
+    align-items: center;
+    gap: 30px;
+ ;
+}
+.aboutphoto{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+
+
+/* Social Icons in Footer */
+.social-icons {
+    display: flex; 
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+
+.social-icons a {
+    background-color: var(--i-color);
+    padding: 15px; 
+    border-radius: 50%; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--text-color); 
+}
+
+.social-icons a svg {
+    color: var(--secondary-color);
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.con-text{
+     text-align: center;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    letter-spacing: 5px;
+}
+
